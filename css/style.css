@@ -39,6 +39,7 @@ body {
 	line-height: 38px;
 	text-align: center;
 	color: #4e5665;
+	font-weight: 400;
 }
 
 .header__top {
@@ -224,6 +225,64 @@ body {
 	border-right: none;
 	border-left: 2px solid #ecb84c;
 }
+
+.about__preview-title {
+	margin-bottom: 38px;
+}
+.about__preview-text {
+	margin: 53px auto 80px;
+}
+
+.about__images-box {
+	padding-top: 73px;
+	position: relative;
+}
+.about__dot {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background-color: rgba(236, 184, 76, 0.5);
+	cursor: pointer;
+	position: absolute;
+}
+
+.about__dot--3 {
+	top: 147px;
+	right: 374px;
+}
+
+.about__dot::after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #ffd600;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.about__dot::before {
+	content: "";
+	position: absolute;
+	background-image: url(../images/line.svg);
+	width: 244px;
+	height: 122px;
+	top: -113px;
+	left: 25px;
+}
+.about__dot-text {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 28px;
+	color: #505050;
+	position: absolute;
+	top: -140px;
+	left: 150px;
+	white-space: nowrap;
+}
+
+/* TODO end cadillack */
 .photo {
 	padding: 80px 0;
 }
@@ -248,6 +307,7 @@ body {
 .photo__slider {
 	max-width: 640px;
 	margin: 0 auto;
+	filter: drop-shadow(0px 2px 24px rgba(0, 0, 0, 0.3));
 }
 .slick-arrow {
 	border: none;
