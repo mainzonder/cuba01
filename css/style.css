@@ -246,9 +246,21 @@ body {
 	position: absolute;
 }
 
+.about__dot--1 {
+	top: 190px;
+	left: 148px;
+}
+.about__dot--2 {
+	top: 188px;
+	left: 495px;
+}
 .about__dot--3 {
 	top: 147px;
 	right: 374px;
+}
+.about__dot--4 {
+	bottom: 28px;
+	right: 299px;
 }
 
 .about__dot::after {
@@ -270,6 +282,7 @@ body {
 	height: 122px;
 	top: -113px;
 	left: 25px;
+	display: none;
 }
 .about__dot-text {
 	font-weight: bold;
@@ -280,6 +293,14 @@ body {
 	top: -140px;
 	left: 150px;
 	white-space: nowrap;
+	display: none;
+}
+
+.about__dot:hover::before {
+	display: block;
+}
+.about__dot:hover .about__dot-text {
+	display: block;
 }
 
 /* TODO end cadillack */
@@ -399,4 +420,94 @@ body {
 	text-align: center;
 	font-size: 14px;
 	line-height: 19px;
+}
+
+.menu__btn {
+	display: none;
+}
+@media (max-width: 840px) {
+	.about__item {
+		padding: 382px 0 70px;
+		background-position: top;
+		margin-bottom: 0;
+	}
+	.about__box {
+		margin: 0 auto;
+	}
+}
+@media (max-width: 700px) {
+	.header__title {
+		font-size: 120px;
+		line-height: 150px;
+	}
+	.header__text {
+		font-size: 20px;
+	}
+	.menu {
+		position: relative;
+	}
+	.menu__btn {
+		display: block;
+		width: 40px;
+		cursor: pointer;
+		position: absolute;
+		right: 40px;
+		top: 10px;
+	}
+	.menu__btn span {
+		display: block;
+		margin-bottom: 10px;
+		background-color: #ffd600;
+		height: 4px;
+	}
+	.menu__list {
+		display: none;
+		padding-top: 60px;
+		text-align: center;
+		border-bottom: 4px solid #ecb84c;
+	}
+	.menu__list-link {
+		display: block;
+		transition: all 0s;
+		border-top: 4px solid #ecb84c;
+	}
+
+	.menu__list-link:hover {
+		border-bottom: 4px solid transparent;
+	}
+}
+@media (max-width: 540px) {
+	.header__text {
+		display: none;
+	}
+	.header__top-inner {
+		border-bottom: 2px solid #ecb84c;
+	}
+	.header__top {
+		padding: 10px;
+	}
+	.header__title {
+		font-size: 100px;
+	}
+	.title {
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	body {
+		font-size: 15px;
+		line-height: 24px;
+	}
+	.reason__statistics {
+		display: block;
+	}
+	.reason__statistics-item {
+		margin-bottom: 35px;
+	}
+}
+
+@media (min-width: 700px) {
+	.menu__list {
+		display: flex !important;
+	}
 }
